@@ -1,0 +1,55 @@
+{
+    "name": "sqits/laravel-searchable",
+    "description": "Package to add an easy way to add a basic search functionality to your models",
+    "keywords": ["laravel", "search", "eloquent", "query"],
+    "homepage": "https://github.com/sqits/laravel-searchable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sqits",
+            "email": "info@sqits.nl",
+            "homepage": "https://www.sqits.nl",
+            "role": "Company"
+        },
+        {
+            "name": "Ruud Schaaphuizen",
+            "email": "ruud@sqits.nl",
+            "homepage": "https://www.sqits.nl",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/sqits/laravel-searchable"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "laravel/framework": "^5.6|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "^3.5",
+        "larapack/dd": "^1.0",
+        "doctrine/dbal": "^2.6"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Sqits\\Searchable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sqits\\Searchable\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sqits\\Searchable\\SearchableServiceProvider"
+            ]
+        }
+    }
+}

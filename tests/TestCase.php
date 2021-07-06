@@ -49,7 +49,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         Package::create([
             'framework_id' => $framework->id,
             'name' => 'laravel-searchable',
-            'description' => 'Package to add an easy way to add a basic search functionality to your models'
+            'description' => 'Package to add an easy way to add a basic search functionality to your models',
         ]);
     }
 }

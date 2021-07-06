@@ -3,7 +3,7 @@
 Provides an Eloquent trait to add to your models to integrate an easy way to search in your model and relations.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sqits/laravel-searchable.svg?style=flat-square)](https://packagist.org/packages/sqits/laravel-searchable)
-[![Build Status](https://img.shields.io/travis/sqits/laravel-searchable/master.svg?style=flat-square)](https://travis-ci.org/sqits/laravel-searchable)
+[![Build Status](https://img.shields.io/travis/sqits/laravel-searchable/master.svg?style=flat-square)](https://travis-ci.com/sqits/laravel-searchable)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sqits/laravel-searchable.svg?style=flat-square)](https://scrutinizer-ci.com/g/sqits/laravel-searchable)
 [![StyleCI](https://github.styleci.io/repos/180816659/shield)](https://styleci.io/repos/180816659)
 [![Total Downloads](https://img.shields.io/packagist/dt/sqits/laravel-searchable.svg?style=flat-square)](https://packagist.org/packages/sqits/laravel-searchable)

@@ -1,7 +1,6 @@
-# Package to maintain the users who created, updated and deleted eloquent models
+# Package to add an easy way to add a basic search functionality to your models
 
-Provides an Eloquent trait to automatically maintain the created_by, updated_by, and deleted_by (when using softDeletes)
-on your models by the currently logged in user.
+Provides an Eloquent trait to add to your models to integrate an easy way to search in your model and relations.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sqits/laravel-searchable.svg?style=flat-square)](https://packagist.org/packages/sqits/laravel-searchable)
 [![Build Status](https://img.shields.io/travis/sqits/laravel-searchable/master.svg?style=flat-square)](https://travis-ci.org/sqits/laravel-searchable)
@@ -29,58 +28,13 @@ This is the contents of the published config file:
 return [
 
     /*
-     * Define the table which is used in the database to retrieve the users
+     * Define the parameter in your request which contains the search values
      */
 
-    'users_table' => 'users',
-    
-    /*
-     * Define the table column type which is used in the table schema for
-     * the id of the user
-     *
-     * Options: increments, bigIncrements, uuid
-     * Default: bigIncrements
-     */
-
-    'users_table_column_type' => 'bigIncrements',
-
-    /*
-     * Define the name of the column which is used in the foreign key reference
-     * to the id of the user
-     */
-
-    'users_table_column_id_name' => 'id',
-    
-    /*
-     * Define the mmodel which is used for the relationships on your models
-     */
-    
-    'users_model' => \App\Models\User::class,
-    
-    /*
-     * Define the column which is used in the database to save the user's id
-     * which created the model.
-     */
-
-    'created_by_column' => 'created_by',
-
-    /*
-     * Define the column which is used in the database to save the user's id
-     * which updated the model.
-     */
-
-    'updated_by_column' => 'updated_by',
-
-    /*
-     * Define the column which is used in the database to save the user's id
-     * which deleted the model.
-     */
-
-    'deleted_by_column' => 'deleted_by',
+    'parameter' => 'search',
 
 ];
 ```
-
 
 Add the Trait to your model
 
@@ -109,19 +63,6 @@ protected $searchables = [
     'name' => [
         'first_name' => 'like',
         'last_name' => 'like',
-    ],
-];
-
-// joined field
-protected $searchables = [
-    'author.name' => 'like',
-];
-
-// joined combined field
-protected $searchables = [
-    'author.name' => [
-        'first_name' => 'like',
-        'last_name' => 'like'
     ],
 ];
 ```

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 trait HasSearchable
 {
-    public function scopeSearchable(Builder $query, Request $request = null) : Builder
+    public function scopeSearchable(Builder $query, Request $request = null): Builder
     {
         if ($request === null) {
             $request = request();
@@ -29,7 +29,7 @@ trait HasSearchable
         return $query;
     }
 
-    private function addSearchablesToBuilder(array $searchables, Builder $query) : Builder
+    private function addSearchablesToBuilder(array $searchables, Builder $query): Builder
     {
         $query->where(function (Builder $query) use ($searchables) {
             foreach ($searchables as $key => $value) {
@@ -60,7 +60,7 @@ trait HasSearchable
 
                         if (method_exists($query->getModel(), $key)) {
                             $query->whereHas($key, function ($query) use ($key, $values) {
-                                $query->where(function($query) use ($key, $values) {
+                                $query->where(function ($query) use ($key, $values) {
                                     foreach ($values as $value) {
                                         if ($this->searchables[$key] === 'like') {
                                             $value = '%'.$value.'%';
@@ -81,7 +81,6 @@ trait HasSearchable
                                 }
                             });
                         }
-
                     } else {
                         if ($this->searchables[$key] === 'like') {
                             $value = '%'.$value.'%';
@@ -102,8 +101,7 @@ trait HasSearchable
         return $query;
     }
 
-
-    private function getSearchables() : array
+    private function getSearchables(): array
     {
         return $this->searchables ?? [];
     }

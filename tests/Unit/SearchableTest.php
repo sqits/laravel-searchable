@@ -10,19 +10,19 @@ use Sqits\Searchable\Tests\TestCase;
 class SearchableTest extends TestCase
 {
     /**
-     * Test if a search on a simple field of the model can be performed
+     * Test if a search on a simple field of the model can be performed.
      *
      * @test
      * @return void
      */
-    public function it_can_search_in_a_simple_field() : void
+    public function it_can_search_in_a_simple_field(): void
     {
         $request = new Request();
 
         $request->merge([
             'search' => [
                 'name' => 'lara',
-            ]
+            ],
         ]);
 
         $framework = Framework::searchable($request)->first();
@@ -31,19 +31,19 @@ class SearchableTest extends TestCase
     }
 
     /**
-     * Test if a search on a combined field of the model can be performed
+     * Test if a search on a combined field of the model can be performed.
      *
      * @test
      * @return void
      */
-    public function it_can_search_in_a_combined_field() : void
+    public function it_can_search_in_a_combined_field(): void
     {
         $request = new Request();
 
         $request->merge([
             'search' => [
                 'combined' => 'artisans',
-            ]
+            ],
         ]);
 
         $framework = Framework::searchable($request)->first();
@@ -103,6 +103,4 @@ class SearchableTest extends TestCase
 //        $this->assertEquals('Laravel', $framework->name);
 //        $this->assertEquals('Package to add an easy way to add a basic search functionality to your models', $framework->packages->first()->description);
 //    }
-
-
 }

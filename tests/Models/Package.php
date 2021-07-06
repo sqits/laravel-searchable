@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sqits\Searchable\Tests\Models;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -18,7 +16,7 @@ class Package extends Model
         'framework_id', 'name', 'description',
     ];
 
-    public function frameworks() : BelongsToMany
+    public function frameworks(): BelongsToMany
     {
         return $this->belongsTo(Framework::class);
     }

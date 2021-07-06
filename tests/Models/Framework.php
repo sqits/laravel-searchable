@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sqits\Searchable\Tests\Models;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -18,13 +16,13 @@ class Framework extends Model
             'name' => 'like',
             'description' => 'like',
         ],
-//        'packages' => [
-//            'name' => 'like',
-//            'combined' => [
-//                'name' => 'like',
-//                'description' => 'like'
-//            ],
-//        ],
+        //        'packages' => [
+        //            'name' => 'like',
+        //            'combined' => [
+        //                'name' => 'like',
+        //                'description' => 'like'
+        //            ],
+        //        ],
     ];
 
     /**
@@ -36,7 +34,7 @@ class Framework extends Model
         'name', 'description',
     ];
 
-    public function packages() : HasMany
+    public function packages(): HasMany
     {
         return $this->hasMany(Package::class);
     }

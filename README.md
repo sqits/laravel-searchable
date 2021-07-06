@@ -51,7 +51,7 @@ Add the configuration to your model which fields are searchable
 
 ``` php
 
-In the examples we are using `like`, but every value which you could use in eloquent are usable eg '=', '=>', '<=', '>', '<' etc.
+// In the examples we are using `like`, but every value which you could use in eloquent are usable eg '=', '=>', '<=', '>', '<' etc.
 
 // simple field
 protected $searchables = [
@@ -76,7 +76,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 If you discover any security-related issues, please [email](mailto:info@sqits.nl) to info@sqits.nl instead of using the issue tracker.
 
 ## Credits
-
+upda
 - [Sqits](https://github.com/sqits)
 - [Ruud Schaaphuizen](https://github.com/rschaaphuizen)
 - [All Contributors](../../contributors)

@@ -10,7 +10,7 @@ Provides an Eloquent trait to add to your models to integrate an easy way to sea
 
 ## Installation and usage
 
-This package requires PHP 7.2 and Laravel 5.6 or higher. Install the package by running the following command in your console;
+This package requires PHP 7.3 and Laravel 5.6 or higher. Install the package by running the following command in your console;
 
 ``` bash
 composer require sqits/laravel-searchable
